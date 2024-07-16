@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button and Button Example</title>
+    <script>
+        function displaySelectedFruit() {
+            // 取得所有帶有 name 屬性為 'fruit' 的單選按鈕
+            const fruits = document.getElementsByName('fruit');
+            let selectedFruit = '';
+
+            // 遍歷單選按鈕，找到被選中的那個
+            for (let i = 0; i < fruits.length; i++) {
+                if (fruits[i].checked) {
+                    selectedFruit = fruits[i].value;
+                    break;
+                }
+            }
+
+            // 顯示選擇的水果
+            document.getElementById('result').innerText = 'You selected: ' + selectedFruit;
+        }
+    </script>
+</head>
+<body>
+    <h1>Select Your Favorite Fruit</h1>
+    <form>
+        <input type="radio" id="apple" name="fruit" value="apple">
+        <label for="apple">Apple</label><br>
+
+        <input type="radio" id="banana" name="fruit" value="banana">
+        <label for="banana">Banana</label><br>
+
+        <input type="radio" id="cherry" name="fruit" value="cherry">
+        <label for="cherry">Cherry</label><br>
+
+        <input type="radio" id="durian" name="fruit" value="durian">
+        <label for="durian">Durian</label><br>
+
+        <input type="radio" id="grapes" name="fruit" value="grapes">
+        <label for="grapes">Grapes</label><br>
+    </form>
+    <br>
+    <input type="button" value="Submit" onclick="displaySelectedFruit()">
+    <p id="result"></p>
+</body>
+</html>
