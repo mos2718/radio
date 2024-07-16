@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas 繪圖 - 矩形</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+
+        // 繪製矩形
+        context.fillStyle = '#FF0000'; // 設定填充顏色
+        context.fillRect(100, 100, 150, 100); // 矩形起點 (100, 100)，寬 150，高 100
+    </script>
+</body>
+</html>
